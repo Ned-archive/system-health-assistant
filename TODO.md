@@ -3,7 +3,7 @@
 ## Core diagnostics
 - [x] Disk health
 - [x] CPU health
-- [ ] RAM health
+- [x] RAM health
 
 ## Code structure
 - [ ] Refactor diagnostics into functions

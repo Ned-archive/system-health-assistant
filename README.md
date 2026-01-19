@@ -17,3 +17,8 @@ Elderly and non-technical users often struggle with system issues, while existin
 - Explanations must be easy to understand for users unfamiliar with computer terms
 - Must run on low-end hardware
 - Minimal performance impact
+
+## Decisions and Design Considerations
+- Focused on clear, concise messaging for non-technical users: avoided system concepts like “RAM,” used short warnings, and limited analogies.
+- Decided to keep CPU, disk, and memory checks in a single flow initially for simplicity, with potential refactoring into more complex functions later.
+- Designed warnings and messages to be actionable but non-intimidating, balancing clarity with technical accuracy.

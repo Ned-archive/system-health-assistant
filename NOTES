@@ -56,7 +56,9 @@ Important choices that require experimentation or research.
 ## 6. Things I Learned While Building
 Notes added over time.
 
-- 
+- At first, I printed messages directly when something was wrong (like storage being too full). That works, but it mixes checking the problem with showing the message.
+I learned it’s better to let the program check first and return a result, and then decide later how to show it
+(print it, show it in a window, or hide it). This makes the code easier to reuse, change, and grow without rewriting everything.
 - 
 - 
 

@@ -22,6 +22,7 @@ Elderly and non-technical users often struggle with system issues, while existin
 - Focused on clear, concise messaging for non-technical users: avoided system concepts like “RAM,” used short warnings, and limited analogies.
 - Decided to keep CPU, disk, and memory checks in a single flow initially for simplicity, with potential refactoring into more complex functions later.
 - Designed warnings and messages to be actionable but non-intimidating, balancing clarity with technical accuracy.
+- Separate each function into distinct modules to implement a **three-scan approach**.
 
 ## Future Plans 
 - Implement a **three-scan approach**:

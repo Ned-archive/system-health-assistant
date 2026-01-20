@@ -6,8 +6,8 @@
 - [x] RAM health
 
 ## Code structure
-- [ ] Refactor diagnostics into functions
-- [ ] Separate diagnostics into modules
+- [x] Refactor diagnostics into functions
+- [x] Separate diagnostics into modules
 
 ## Advisory layer
 - [ ] Human-readable explanations

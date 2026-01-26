@@ -23,3 +23,6 @@
 - [ ] Logging
 - [ ] Guided support (links to trusted services, vendors, or support contacts based on detected issues)
 - [ ] Uptime check (“PC hasn’t restarted in X days”)
+- [ ] Startup overload (light version)
+- [ ] Battery health (laptops only)
+- [ ] Temperature (if available safely)

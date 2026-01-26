@@ -22,4 +22,4 @@
 - [ ] Voice input
 - [ ] Logging
 - [ ] Guided support (links to trusted services, vendors, or support contacts based on detected issues)
-
+- [ ] Uptime check (“PC hasn’t restarted in X days”)

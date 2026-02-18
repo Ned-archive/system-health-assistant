@@ -26,3 +26,5 @@
 - [ ] Startup overload (light version)
 - [ ] Battery health (laptops only)
 - [ ] Temperature (if available safely)
+- [ ] App freezing - task manager
+- [ ] 

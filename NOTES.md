@@ -1,71 +1,147 @@
 # Internal Notes — System Health Assistant
 
-⚠️ This file is for personal thinking, questions, and planning.
-Not meant for users or recruiters.
 
 ---
 
-## 1. Open Questions
-Questions I don’t know the answer to yet.
+1️⃣ Core Philosophy (Locked)
 
-- How often should system metrics be sampled?
-- What counts as “normal” vs “problematic” for an elderly user?
-- How much explanation is too much before it becomes overwhelming?
+Strictly read-only.
 
----
+Zero automatic fixes.
 
-## 2. Feature Ideas (Unfiltered)
-Ideas go here before deciding if they are good or bad.
+Clear language for non-technical users.
 
-- Battery health (for laptops)
-- Simple “health score” instead of raw percentages
-- System uptime (how long the computer has been running, can suggest a restart if very long)
-- Temperature sensors (CPU/GPU temps, if available)
-- Provide the contact information of a person or a company that can help resolve the issue the app finds. 
+Modular, scalable architecture.
 
----
+Low system impact.
 
-## 3. Risks & Concerns
-Things that could break trust, safety, or usability.
+Trust-first design.
 
-- False positives causing unnecessary anxiety
-- Performance impact on very old machines
-- Over-explaining simple issues
+2️⃣ Architectural Improvements Required
+A. Unified Diagnostic Model (Next Major Refactor)
 
----
+All checks should return:
 
-## 4. Design Thoughts (Messy Allowed)
-Half-formed ideas, sketches, and reasoning.
+{
+    "name": "CPU",
+    "status": "ok" | "notice" | "warning" | "critical",
+    "summary": "Short message",
+    "details": { structured numeric data }
+}
 
-- Quick Scan = simple and non-overwhelming
-- Modular = gives control without clutter
-- Full Report = shows technical depth for portfolio/interview
-- Might need different explanation levels (short vs detailed)
-- Interactive fixes = provide guidance/instructions, never automate, keeps read-only guarantee intact.
----
+Benefits:
 
-## 5. Decisions To Make Later
-Important choices that require experimentation or research.
+Enables generic scan rendering.
 
-- CLI vs simple GUI
-- How to store system snapshots (if at all)
-- Whether to support Windows-only first
+Makes Quick / Full / Modular reusable.
 
----
+Enables health score calculation.
 
-## 6. Things I Learned While Building
-Notes added over time.
+Scales cleanly.
 
-- At first, I printed messages directly when something was wrong (like storage being too full). That works, but it mixes checking the problem with showing the message.
-I learned it’s better to let the program check first and return a result, and then decide later how to show it
-(print it, show it in a window, or hide it). This makes the code easier to reuse, change, and grow without rewriting everything.
-- 
-- 
+B. Severity Levels (Must Add)
 
----
+Current: ok / warning
+Future:
 
-## 7. Ideas I Explicitly Rejected (and Why)
-Prevents going in circles later.
+ok
 
-- Automatic fixes — too risky for target users
-- Complex dashboards — defeats the purpose
+notice (mild concern)
+
+warning
+
+critical
+
+Reason:
+Elder users need prioritization clarity.
+Portfolio needs stronger system thinking.
+
+C. False Positive Prevention
+
+CPU and RAM should use smoothing:
+
+3 samples
+
+averaged
+
+avoid transient spikes
+
+Trust > sensitivity.
+
+D. Health Score (Optional, Requires Defined Math)
+
+If implemented:
+
+Define weighted logic:
+
+Disk = 40%
+
+CPU = 30%
+
+RAM = 30%
+
+Must justify formula.
+Otherwise it becomes meaningless.
+
+E. Uptime Check (High Value)
+
+Example output:
+"Your computer has not been restarted in 17 days."
+
+Safe.
+Actionable.
+Useful.
+
+F. Trust Reinforcement Layer
+
+Print once per session:
+
+"This tool does not make any changes to your computer."
+
+Critical for elderly UX.
+
+3️⃣ Refined Open Questions
+
+What thresholds define elderly-safe warning levels?
+
+Should thresholds differ between Quick and Full modes?
+
+Should severity consider duration (future logging feature)?
+
+How many analogies are too many?
+
+4️⃣ Risk Model Expansion
+
+Add:
+
+Over-sensitivity due to CPU spikes
+
+Platform-specific partition detection issues
+
+External drives accidentally included in disk scan
+
+Permission errors on restricted partitions
+
+5️⃣ Strategic Direction
+
+Short-term focus:
+
+Refactor architecture
+
+Add severity model
+
+Add uptime
+
+Add smoothing
+
+Long-term:
+
+GUI
+
+Logging
+
+Snapshot comparison
+
+Guided troubleshooting (text-only)
+
+

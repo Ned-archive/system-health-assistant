@@ -3,7 +3,7 @@
 
 ---
 
-##1 Core Philosophy (Locked)
+## 1 Core Philosophy (Locked)
 
 Strictly read-only.
 
@@ -17,7 +17,7 @@ Low system impact.
 
 Trust-first design.
 
-##2 Architectural Improvements Required
+## 2 Architectural Improvements Required
 A. Unified Diagnostic Model (Next Major Refactor)
 
 All checks should return:
@@ -39,7 +39,7 @@ Enables health score calculation.
 
 Scales cleanly.
 
-B. Severity Levels (Must Add)
+## B. Severity Levels (Must Add)
 
 Current: ok / warning
 Future:
@@ -56,7 +56,7 @@ Reason:
 Elder users need prioritization clarity.
 Portfolio needs stronger system thinking.
 
-C. False Positive Prevention
+## C. False Positive Prevention
 
 CPU and RAM should use smoothing:
 
@@ -68,7 +68,7 @@ avoid transient spikes
 
 Trust > sensitivity.
 
-D. Health Score (Optional, Requires Defined Math)
+## D. Health Score (Optional, Requires Defined Math)
 
 If implemented:
 
@@ -83,7 +83,7 @@ RAM = 30%
 Must justify formula.
 Otherwise it becomes meaningless.
 
-E. Uptime Check (High Value)
+## E. Uptime Check (High Value)
 
 Example output:
 "Your computer has not been restarted in 17 days."
@@ -92,7 +92,7 @@ Safe.
 Actionable.
 Useful.
 
-F. Trust Reinforcement Layer
+## F. Trust Reinforcement Layer
 
 Print once per session:
 
@@ -100,7 +100,7 @@ Print once per session:
 
 Critical for elderly UX.
 
-##3 Refined Open Questions
+## 3 Refined Open Questions
 
 What thresholds define elderly-safe warning levels?
 
@@ -110,7 +110,7 @@ Should severity consider duration (future logging feature)?
 
 How many analogies are too many?
 
-##4 Risk Model Expansion
+## 4 Risk Model Expansion
 
 Add:
 
@@ -122,7 +122,7 @@ External drives accidentally included in disk scan
 
 Permission errors on restricted partitions
 
-##5 Strategic Direction
+## 5 Strategic Direction
 
 Short-term focus:
 

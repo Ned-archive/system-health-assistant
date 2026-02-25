@@ -3,7 +3,7 @@
 
 ---
 
-## 1 Core Philosophy (Locked)
+## 1) Core Philosophy (Locked)
 
 Strictly read-only.
 
@@ -17,7 +17,7 @@ Low system impact.
 
 Trust-first design.
 
-## 2 Architectural Improvements Required
+## 2) Architectural Improvements Required
 A. Unified Diagnostic Model (Next Major Refactor)
 
 All checks should return:
@@ -100,7 +100,7 @@ Print once per session:
 
 Critical for elderly UX.
 
-## 3 Refined Open Questions
+## 3) Refined Open Questions
 
 What thresholds define elderly-safe warning levels?
 
@@ -110,7 +110,7 @@ Should severity consider duration (future logging feature)?
 
 How many analogies are too many?
 
-## 4 Risk Model Expansion
+## 4) Risk Model Expansion
 
 Add:
 
@@ -122,7 +122,7 @@ External drives accidentally included in disk scan
 
 Permission errors on restricted partitions
 
-## 5 Strategic Direction
+## 5) Strategic Direction
 
 Short-term focus:
 
